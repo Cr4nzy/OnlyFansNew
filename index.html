@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlyFans</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background: black;
+            color: white;
+            overflow: hidden;
+        }
+        .loading {
+            font-size: 24px;
+            margin-top: 20%;
+        }
+        .hidden {
+            display: none;
+        }
+        video {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="loading">Loading OnlyFans... Please wait.</div>
+    <video id="jumpscare" class="hidden">
+        <source src= https://www.youtube.com/watch?v=3cyS6wMVCqI type="video/mp4">
+    </video>
+    <script>
+        setTimeout(() => {
+            document.body.innerHTML = ""; // Clear the page
+            let video = document.createElement("video");
+            video.src = "https://your-video-link.mp4"; // Replace with an actual video URL
+            video.autoplay = true;
+            video.loop = false;
+            video.controls = false;
+            video.style.position = "fixed";
+            video.style.width = "100vw";
+            video.style.height = "100vh";
+            video.style.objectFit = "cover";
+            document.body.appendChild(video);
+            video.play();
+        }, 3000); // 3-second delay
+    </script>
+</body>
+</html>
